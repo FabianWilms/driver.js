@@ -43,6 +43,10 @@ export default class Overlay {
     } else {
       this.node.classList.remove(CLASS_NO_ANIMATION);
     }
+
+    if (this.node.parentElement) {
+      this.node.parentElement.removeChild(this.node);
+    }
   }
 
   /**
